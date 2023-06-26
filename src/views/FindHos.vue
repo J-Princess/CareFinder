@@ -122,10 +122,10 @@ const search = (): void => {
     if (searchQuery.value) {
         const request: google.maps.places.PlaceSearchRequest = {
             location: map.getCenter() as google.maps.LatLng,
-            radius: 5000, // Set the radius as per your requirement
+            radius: 5000, 
             keyword: 'hospital',
         };
-        // const placeId = 'ChIJDY2kfa8LThARyAvFaEH-qJkNigeria';
+       
 
         const service = new google.maps.places.PlacesService(map);
 
@@ -134,11 +134,10 @@ const search = (): void => {
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 hospitals.value = results;
 
-                // Clear existing markers
+      
                 markers.forEach((marker) => marker.setMap(null));
                 markers.length = 0;
 
-                // Create markers for each hospital
                 results.forEach((hospital) => {
                     if (hospital.geometry && hospital.geometry.location) {
                         const marker = new google.maps.Marker({
@@ -215,7 +214,7 @@ const getPhotoUrl = (hospital: google.maps.places.PlaceResult): string => {
         const photo = hospital.photos[0];
         return photo.getUrl({ maxWidth: 300, maxHeight: 300 });
     }
-    return 'https://unsplash.com/photos/sbu3lTahl-o'; // Return a placeholder image URL if no photo available
+    return 'https://unsplash.com/photos/sbu3lTahl-o'; 
 };
 
 const addMarkers = (hospital: google.maps.places.PlaceResult[]): void => {
@@ -233,7 +232,7 @@ const addMarkers = (hospital: google.maps.places.PlaceResult[]): void => {
 onMounted(() => {
     // Load Google Maps script
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAY2ez0sDkoi-3VjuLN98e1EZRsHHX2RqM&libraries=places&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=?&libraries=places&callback=initMap`;
     script.defer = true;
     script.async = true;
     document.head.appendChild(script);
