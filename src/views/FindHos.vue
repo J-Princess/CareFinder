@@ -127,7 +127,7 @@ const search = (): void => {
             radius: 5000,
             keyword: 'hospital',
         };
-        // const placeId = 'ChIJDY2kfa8LThARyAvFaEH-qJkNigeria';
+
 
         const service = new google.maps.places.PlacesService(map);
 
@@ -136,11 +136,10 @@ const search = (): void => {
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 hospitals.value = results;
 
-                // Clear existing markers
+
                 markers.forEach((marker) => marker.setMap(null));
                 markers.length = 0;
 
-                // Create markers for each hospital
                 results.forEach((hospital) => {
                     if (hospital.geometry && hospital.geometry.location) {
                         const marker = new google.maps.Marker({
@@ -217,7 +216,7 @@ const getPhotoUrl = (hospital: google.maps.places.PlaceResult): string => {
         const photo = hospital.photos[0];
         return photo.getUrl({ maxWidth: 300, maxHeight: 300 });
     }
-    return 'https://images.unsplash.com/photo-1647221597837-ff41b73a7f54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80'; // Return a placeholder image URL if no photo available
+    return 'https://unsplash.com/photos/sbu3lTahl-o';
 };
 
 const addMarkers = (hospital: google.maps.places.PlaceResult[]): void => {
@@ -235,7 +234,7 @@ const addMarkers = (hospital: google.maps.places.PlaceResult[]): void => {
 onMounted(() => {
     // Load Google Maps script
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAY2ez0sDkoi-3VjuLN98e1EZRsHHX2RqM&libraries=places&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=?&libraries=places&callback=initMap`;
     script.defer = true;
     script.async = true;
     document.head.appendChild(script);

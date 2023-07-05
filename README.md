@@ -1,47 +1,40 @@
-# anotherone
+# CareFinder
 
-This template should help get you started developing with Vue 3 in Vite.
+Capstone project for my program at AltSchool Africa.
+A web application built with Vue3 with typescript support, Bootstrap, and Firebase.
 
-## Recommended IDE Setup
+**[Live here](https://carefinder-web.web.app/)**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<img width="" alt="Screenshot 2023-07-04 at 11 29 08" src="https://github.com/J-Princess/CareFinder/assets/104683810/0ea7ec23-0d12-420c-8ada-f6a2e31432b3">
+<img width="" alt="Screenshot 2023-07-04 at 11 42 46" src="https://github.com/J-Princess/CareFinder/assets/104683810/87d13ef9-2cec-409d-b258-70254e8334eb">
+<img width="1626" alt="Screenshot 2023-07-04 at 11 43 19" src="https://github.com/J-Princess/CareFinder/assets/104683810/45258772-a03f-4108-8084-01e3f48fa845">
+---
 
-## Type Support for `.vue` Imports in TS
+## Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- Firebase Hosting, authentication, and storage
+- Reusable Components
+- **[Vue.js v3](https://vuejs.org/)** with **[Vue Router](https://router.vuejs.org/)**
+- Simple and responsive design
+- Google maps and cloud storage
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+---
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Installation
 
-## Customize configuration
+1. Creating Vue app
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+`npm create vue@3`
 
-## Project Setup
+make sure you have the latest version of NodeJs installed and npm package. 2. Adding Google Maps to your app
 
-```sh
-npm install
+` npm --save @fawmi/vue-google-maps`
+
+```
+<script setup lang=ts>
+import VueGoogleMaps from '@fawmi/vue-google-maps';
+Vue.use(VueGoogleMaps);
+</script>
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-# DisCare
+3. Implement firebase authenication
