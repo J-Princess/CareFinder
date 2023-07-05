@@ -27,7 +27,7 @@ initializeApp(firebaseConfig);
 const app = createApp(App);
 app.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyAY2ez0sDkoi-3VjuLN98e1EZRsHHX2RqM',
+        key: '',
         libraries: ['places']
     },
 })
