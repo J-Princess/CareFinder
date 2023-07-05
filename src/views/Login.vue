@@ -6,7 +6,7 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-md-6" @submit.prevent="onSubmit">
                     <nav aria-label="Breadcrumb"></nav>
-                    <h1 class="text-center">Login Page</h1>
+                    <h1 class="text-center text-secondary">Login Page</h1>
                     <div class="input-group flex-nowrap mt-5">
                         <span class="input-group-text px-3" style=" border-radius:  2px 0 0 2px;">#</span>
                         <input type="email" class="form-control p-4" placeholder="Email" aria-label="Username" name="email"

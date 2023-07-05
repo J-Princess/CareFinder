@@ -13,15 +13,12 @@ const routes: Array<RouteRecordRaw> = [
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
     {
       path: '/find',
       name: 'finder',
-      component: () => import('../views/FindHos.vue')
+      component: () => import ('../views/FindHos.vue')
     },
     {
       path: '/login',
@@ -45,6 +42,10 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
        requiresAuth: true,
       }
+  },{
+    path: '/enter',
+    name: 'entry',
+    component: () => import('../components/Entries.vue')
   },
     {
       path: '/:catchAll(.*)*',
@@ -76,10 +77,10 @@ const getCurrentUser = () => {
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (await getCurrentUser()) {
-      next();
+      next('/profile');
     } else {
       alert("You don't have access, signup to share");
-      next('/profile');
+      next('/sign');
     }
   } else {
     next();

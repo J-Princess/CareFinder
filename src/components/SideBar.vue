@@ -22,7 +22,7 @@
                         <RouterLink to="" class="nav-link">Book An Appointment</RouterLink>
                     </li>
                     <li class="nav-item  mt-2">
-                        <RouterLink to="/" class="nav-link">Home</RouterLink>
+                        <RouterLink to="/enter" class="nav-link">Hospital Entries</RouterLink>
                     </li>
                     <li class="nav-item  mt-2">
                         <RouterLink to="/hospit" class="nav-link ">Search

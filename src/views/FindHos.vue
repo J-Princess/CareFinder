@@ -6,19 +6,21 @@
                 style="background-color: black; border-radius: 10px; width: 80%;" name="address">
             <button @click="search"
                 style="padding: 13px 40px; margin-left: 10px; border-radius: 10px; border: none;">Search</button>
-            <button class="custom-map-control-button" @click="panToCurrentLocation">Go to my Location</button>
+            <button class="custom-map-control-button mt-3 ml-2 border-0 p-2" @click="panToCurrentLocation"
+                style="border-radius: 10px; background: rgb(7, 205, 142);">Go to my
+                Location</button>
         </div>
 
         <div id="map"></div>
-        <div class="container-fluid mt-5 " style="margin: auto;">
-            <h2 class="text-light">Nearby Hospitals:</h2>
+        <div class="container-fluid mt-5 ">
+            <h2 class="text-secondary">Nearby Hospitals:</h2>
             <ul>
-                <div class=" ml-5 row ">
-                    <li v-for="hospital in hospitals" :key="hospital.place_id" class="card col-sm-3 m-4 border-0 mx-4"
-                        style="width: 600px; height: 400px;">
+                <div class="row" style="margin: auto;">
+                    <li v-for="hospital in hospitals" :key="hospital.place_id" class="card col-sm-4 border-0"
+                        style="height: 400px;">
                         <div class="card-body pt-5 px-2 ">
                             <img :src="getPhotoUrl(hospital)" alt="Hospital Photo"
-                                style="border-radius:10px width: 18rem; height: 10rem; " />
+                                style="border-radius:10px width: 15rem; height: 10rem; " />
                             <h5 class="card-title mt-2">{{ hospital.name }}</h5>
                             <p class="card-text"> {{ hospital.vicinity }} </p>
                             <p>
@@ -112,7 +114,7 @@ const handleLocationError = (
     infoWindow.setPosition(pos);
     infoWindow.setContent(
         browserHasGeolocation
-            ? 'Error: The Geolocation service failed.'
+            ? 'Error: The Geolocation service failed. Give browser access to your location'
             : "Error: Your browser doesn't support geolocation."
     );
     infoWindow.open(map);
@@ -122,7 +124,7 @@ const search = (): void => {
     if (searchQuery.value) {
         const request: google.maps.places.PlaceSearchRequest = {
             location: map.getCenter() as google.maps.LatLng,
-            radius: 5000, // Set the radius as per your requirement
+            radius: 5000,
             keyword: 'hospital',
         };
         // const placeId = 'ChIJDY2kfa8LThARyAvFaEH-qJkNigeria';
@@ -215,7 +217,7 @@ const getPhotoUrl = (hospital: google.maps.places.PlaceResult): string => {
         const photo = hospital.photos[0];
         return photo.getUrl({ maxWidth: 300, maxHeight: 300 });
     }
-    return 'https://unsplash.com/photos/sbu3lTahl-o'; // Return a placeholder image URL if no photo available
+    return 'https://images.unsplash.com/photo-1647221597837-ff41b73a7f54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80'; // Return a placeholder image URL if no photo available
 };
 
 const addMarkers = (hospital: google.maps.places.PlaceResult[]): void => {
@@ -261,7 +263,7 @@ li {
 }
 
 img {
-    object-fit: cover;
+
     margin-bottom: 5px;
 }
 </style>

@@ -2,12 +2,12 @@
 
 <template>
     <NavBar />
-    <div class="container mt-5">
+    <div class="container mt-5 pt-3">
         <div class="page-banner2">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-md-6">
                     <!-- <nav aria-label="Breadcrumb"></nav> -->
-                    <h1 class="text-center">Registration</h1>
+                    <h1 class="text-center text-secondary my-5">Registration</h1>
 
                     <div class="input-group flex-nowrap mt-3">
                         <span class="input-group-text px-3" id="addon-wrapping"

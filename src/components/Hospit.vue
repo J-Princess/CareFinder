@@ -31,8 +31,8 @@
                     <h2 class="text-gray">Nearby Hospitals:</h2>
                     <ul class="row">
 
-                        <li v-for="hospital in hospitals" :key="hospital.place_id" class="card col-sm-3 m-4 border-0 "
-                            style="width: 600px; " @submit="hospitals">
+                        <li v-for="hospital in hospitals" :key="hospital.place_id" style="width: 600px; "
+                            @submit="hospitals">
                             <div class="card-body pt-5 ">
                                 <img :src="getPhotoUrl(hospital)" alt="Hospital Photo"
                                     style="border-radius:10px; width: 10rem; height: 10rem; " />

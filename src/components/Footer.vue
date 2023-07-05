@@ -2,22 +2,23 @@
     <footer class="footer_area pt-5">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                <div class="col-sm-4">
                     <div class="footer-widget">
                         <div class="footer-title">
-                            <h1 class="mb-5">CareFinder</h1>
 
+                            <h1>CareFinder</h1>
+                            <img src="../assets/images/carefinder-fotor-2023062820243.png" alt="" srcset=""
+                                style="width: 90px; height: 90px; padding-bottom: 20px;" class="mb-3">
                             <p class="ml-3 display-5">Plot 42, Akinza Street, Victoria island, Lagos<br> +2348159096125</p>
                         </div>
-
                     </div>
                 </div>
 
-                <div class="col-3 col-xl-2 col-lg-3 col-md-3 col-sm-3">
+                <div class="col-3 col-xl-2 col-lg-3 col-md-3 col-sm-4">
                     <div class="footer-widget">
                         <div class="footer-title">About Us</div>
                         <ul class="list-unstyled">
-                            <router-link to="/products">
+                            <router-link to="/about">
                                 <li>News & Media</li>
                             </router-link>
                             <router-link to="/products">
@@ -27,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-4 ">
                     <div class="footer-widget">
                         <div class="footer-title">Quick Links</div>
                         <ul class="list-unstyled">
@@ -37,7 +38,7 @@
                             <router-link to="/products">
                                 <li>Book an appointment </li>
                             </router-link>
-                            <router-link to="/products">
+                            <router-link to="/lib">
                                 <li> Library</li>
                             </router-link>
                         </ul>
@@ -53,20 +54,20 @@
                         <p>Copyright © All Rights Reserved 2023 </p>
                     </div>
                 </div>
-                <!--        <div class="col-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 text-right">-->
-                <!--          <div class="social-info">-->
-                <!--            <strong>Get social</strong>-->
-                <!--            <img class="twitter" src="@/assets/twitter.png">-->
-                <!--            <img class="pinterest" src="@/assets/pinterest.png">-->
-                <!--            <img class="facebook" src="@/assets/facebook.png">-->
-                <!--            <img class="instagram" src="@/assets/insta.png">-->
-                <!--          </div>-->
-                <!--        </div>-->
+                <!-- <div class="col-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 text-right">
+                    <div class="social-info">
+                        <strong>Get social</strong>
+                        <img class="twitter" src="@/assets/twitter.png">
+                        <img class="pinterest" src="@/assets/pinterest.png">
+                        <img class="facebook" src="@/assets/facebook.png">
+                        <img class="instagram" src="@/assets/insta.png">
+                    </div>
+                </div> -->
             </div>
         </div>
     </footer>
 </template>
-  
+<!-- <img src="../assets/images/carefinder.png" alt="" srcset="" style="width: 100px; height: 100px;"> -->
 
   
 <style scoped>
@@ -79,7 +80,7 @@
 }
 
 .footer-widget {
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 .footer-title {
