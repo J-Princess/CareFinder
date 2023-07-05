@@ -23,12 +23,15 @@ __[Live here](https://carefinder-web.web.app/)__
 ```npm create vue@3```
 
 make sure you have the latest version of NodeJs installed and npm package.
-
 2. Adding Google Maps to your app
  
-   ``` npm --save @fawmi/vue-google-maps
+``` npm --save @fawmi/vue-google-maps```
    
+```
+<script setup lang=ts>
 import VueGoogleMaps from '@fawmi/vue-google-maps';
-Vue.use(VueGoogleMaps);```
+Vue.use(VueGoogleMaps);
+</script>
+```
+3. Implement firebase authenication
 
-3. 
